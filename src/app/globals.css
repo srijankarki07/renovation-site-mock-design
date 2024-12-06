@@ -261,7 +261,7 @@ p {
   .aboutUs {
     flex-direction: column;
     padding: 50px 20px;
-    margin-top: 50px;
+    margin-top: 60vh;
   }
 
   .aboutUs-content {

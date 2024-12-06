@@ -40,7 +40,6 @@ export default function Header() {
           height={0}
           alt="logo"
           layout="responsive"
-          className="desktop"
         />
       </header>
 
