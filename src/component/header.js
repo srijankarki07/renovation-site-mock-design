@@ -27,7 +27,7 @@ export default function Header() {
     "Breathe New Life Into Your Home",
     "From Dream to Reality: Expert Renovations",
   ];
-  const typingSpeed = 150;
+  const typingSpeed = 100;
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
