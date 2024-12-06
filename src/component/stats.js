@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaUsers } from "react-icons/fa";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import { IoTrophyOutline } from "react-icons/io5";
@@ -15,12 +15,39 @@ export default function Stats() {
     { id: 3, name: "Awards", value: 59, icon: <IoTrophyOutline /> },
   ];
 
+  const statsRef = useRef(null);
+  const [inView, setInView] = useState(false);
+  const [hasCounted, setHasCounted] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasCounted) {
+          setInView(true);
+          setHasCounted(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, [hasCounted]);
+
   return (
-    <div className="stats">
+    <div className="stats" ref={statsRef}>
       {stats.map((item) => (
         <div key={item.id} className="stats-item">
           <div className="stats-icon">{item.icon}</div>
-          <CountUp number={item.value} />
+          {inView && <CountUp number={item.value} />}
           <div className="stats-name">{item.name}</div>
         </div>
       ))}

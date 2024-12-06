@@ -35,21 +35,12 @@ export default function Header() {
     <div className={`header ${isScrolled ? "scrolled" : ""}`}>
       <header className="logo">
         <Image
-          src="/logo.png"
-          width={0}
-          height={0}
-          alt="logo"
-          layout="responsive"
-          className="desktop"
-        />
-
-        <Image
           src="/logo-dark.png"
           width={0}
           height={0}
           alt="logo"
           layout="responsive"
-          className="mobile"
+          className="desktop"
         />
       </header>
 

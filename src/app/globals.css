@@ -110,9 +110,6 @@ p {
   transform: scale(1.1);
   padding: 10px;
 }
-.mobile {
-  display: none;
-}
 .menu {
   display: flex;
   justify-content: space-between;
@@ -148,13 +145,6 @@ p {
 
   .logo {
     padding-left: 10px;
-  }
-  .mobile {
-    display: block;
-  }
-
-  .desktop {
-    display: none;
   }
 
   .menu {
