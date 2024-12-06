@@ -357,6 +357,7 @@ p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .service-item:hover {
@@ -438,6 +439,7 @@ p {
   align-items: center;
   width: 100%;
   color: #333;
+  cursor: pointer;
 }
 
 .stats-icon {
@@ -551,6 +553,7 @@ p {
   gap: 10px;
   background-color: #fff;
   padding: 20px;
+  cursor: pointer;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
