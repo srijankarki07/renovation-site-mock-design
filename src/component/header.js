@@ -8,12 +8,43 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const [typedText, setTypedText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
   const menu = [
+    { id: 1, path: "/#home", name: "Home" },
     { id: 2, path: "/#aboutUs", name: "About Us" },
     { id: 3, path: "/#services", name: "Services" },
     { id: 4, path: "/#features", name: "Our Features" },
     { id: 6, path: "/#contact", name: "Contact" },
   ];
+
+  const textToType = [
+    "Reimagine, Renovate, Revitalize",
+    "Transform Your Space, Elevate Your Living",
+    "Revamp Your Home, Redefine Your Lifestyle",
+    "Breathe New Life Into Your Home",
+    "From Dream to Reality: Expert Renovations",
+  ];
+  const typingSpeed = 150;
+
+  useEffect(() => {
+    const typingInterval = setInterval(() => {
+      if (charIndex < textToType[index].length) {
+        setTypedText((prevText) => prevText + textToType[index][charIndex]);
+        setCharIndex((prevCharIndex) => prevCharIndex + 1);
+      } else {
+        setTimeout(() => {
+          setCharIndex(0);
+          setIndex((prevIndex) => (prevIndex + 1) % textToType.length);
+          setTypedText("");
+        }, 1000);
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(typingInterval);
+  }, [index, charIndex]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,35 +63,40 @@ export default function Header() {
   }, []);
 
   return (
-    <div className={`header ${isScrolled ? "scrolled" : ""}`}>
-      <header className="logo">
-        <Image
-          src="/logo-dark.png"
-          width={0}
-          height={0}
-          alt="logo"
-          layout="responsive"
-        />
-      </header>
+    <div className="container">
+      <div className={`header ${isScrolled ? "scrolled" : ""}`}>
+        <header className="logo">
+          <Image
+            src="/logo-dark.png"
+            width={0}
+            height={0}
+            alt="logo"
+            layout="responsive"
+          />
+        </header>
 
-      <div className="menu">
-        {menu.map((item) => (
-          <p key={item.id} onClick={() => router.push(item.path)}>
-            {item.name}
-          </p>
-        ))}
+        <div className="menu">
+          {menu.map((item) => (
+            <p key={item.id} onClick={() => router.push(item.path)}>
+              {item.name}
+            </p>
+          ))}
+        </div>
+
+        <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <span className="hamburger-icon">&#9776;</span>
+        </div>
+
+        <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
+          {menu.map((item) => (
+            <p key={item.id} onClick={() => router.push(item.path)}>
+              {item.name}
+            </p>
+          ))}
+        </div>
       </div>
-
-      <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <span className="hamburger-icon">&#9776;</span>
-      </div>
-
-      <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
-        {menu.map((item) => (
-          <p key={item.id} onClick={() => router.push(item.path)}>
-            {item.name}
-          </p>
-        ))}
+      <div className="typing-text">
+        <p>{typedText}</p>
       </div>
     </div>
   );

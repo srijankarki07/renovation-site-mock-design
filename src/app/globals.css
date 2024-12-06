@@ -65,7 +65,11 @@ p {
   }
 }
 /***************************header **********************/
-
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -131,6 +135,40 @@ p {
 .menu-toggle,
 .mobile-menu {
   display: none;
+}
+
+.typing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.typing-text p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  color: #fff;
+  white-space: wrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  display: inline-block;
+  animation: typing 3s steps(30) 1s 1 normal both, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @media (max-width: 768px) {
@@ -200,7 +238,6 @@ p {
   width: 100%;
   background-color: #f9f9f9;
   padding: 100px 50px;
-  margin-top: 100vh;
   color: #333;
 }
 
