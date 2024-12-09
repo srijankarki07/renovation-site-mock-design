@@ -67,11 +67,12 @@ export default function Header() {
       <div className={`header ${isScrolled ? "scrolled" : ""}`}>
         <header className="logo">
           <Image
-            src="/logo-dark.png"
+            src="/logo.png"
             width={0}
             height={0}
             alt="logo"
             layout="responsive"
+            onClick={() => router.push("/")}
           />
         </header>
 

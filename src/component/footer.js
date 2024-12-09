@@ -9,7 +9,7 @@ export default function Footer() {
         <FaTwitter />
         <FaInstagram />
       </div>
-      <p>Home Renovation Company © 2024</p>
+      <p>Savamex Oy © 2024</p>
       <p>All rights reserved</p>
     </div>
   );
