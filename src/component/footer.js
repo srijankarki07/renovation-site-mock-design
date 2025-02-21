@@ -9,7 +9,7 @@ export default function Footer() {
         <FaTwitter />
         <FaInstagram />
       </div>
-      <p>Savamex Oy © 2024</p>
+      <p>Hamro Constuctions © {new Date().getFullYear()}</p>
       <p>All rights reserved</p>
     </div>
   );

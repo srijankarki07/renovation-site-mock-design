@@ -2,37 +2,37 @@ import Image from "next/image";
 
 export default function Services() {
   const services = {
-    title: "Our Construction Services",
+    title: "Our Renovation & Construction Services",
     subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis porttitor feugiat. Cras accumsan rutrum euismod. Maecenas vestibulum libero ac elit ultrices, sit amet interdum purus feugiat.",
+      "At Hamro Constuctions, we specialize in high-quality renovation and construction services designed to transform your space. Whether you're looking for a complete home makeover or a specific upgrade, our expert team ensures precision, durability, and modern design solutions.",
     services: [
       {
         id: 1,
-        name: "House Renovation",
+        name: "Home Renovation",
         image: "/s1.jpg",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec gravida erat fermentum a.",
+          "Revitalize your home with our expert renovation services. From minor upgrades to full-scale transformations, we enhance functionality, aesthetics, and value.",
       },
       {
         id: 2,
-        name: "House Remodeling",
+        name: "Home Remodeling",
         image: "/s2.jpg",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec gravida erat fermentum a.",
+          "Upgrade your living space with customized remodeling solutions. We focus on modern designs, improved layouts, and enhanced comfort tailored to your lifestyle.",
       },
       {
         id: 3,
-        name: "House Renovation",
+        name: "Interior & Exterior Renovation",
         image: "/s3.jpg",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec gravida erat fermentum a.",
+          "Give your home a fresh, modern look both inside and out. Our team ensures top-quality finishes and attention to detail for a seamless transformation.",
       },
       {
         id: 4,
-        name: "House Reconstruction",
+        name: "Structural Reconstruction",
         image: "/s4.jpg",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nisl nulla, nec gravida erat fermentum a.",
+          "Rebuild and strengthen your property with our structural reconstruction services. We ensure safety, durability, and compliance with modern building standards.",
       },
     ],
   };

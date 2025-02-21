@@ -5,11 +5,11 @@ export default function AboutUs() {
     {
       id: 1,
       title: "Welcome to",
-      header: "Savamex Oy",
+      header: "Hamro Constuctions",
       description1:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula malesuada nisi eu rutrum. Maecenas purus diam, lobortis at velit eget, ultricies posuere augue. Nullam nec lectus a augue dictum euismod ut sed ex. Integer pretium arcu neque, vitae mollis massa consequat eu. In eget dolor luctus, varius dui fringilla, lobortis odio. Cras molestie nunc pretium, dictum lorem vel, vulputate mi. Etiam ac ligula bibendum, luctus diam sit amet, rutrum ipsum.",
+        " At Hamro Constuctions, we bring new life to your spaces with expert craftsmanship and innovative solutions. Whether you're looking to renovate your home, office, or commercial space, our skilled team is dedicated to delivering high-quality results tailored to your needs. ",
       description2:
-        "Praesent tempus at neque non hendrerit. In euismod vestibulum sodales. Fusce feugiat dapibus facilisis. Sed interdum mauris sed vulputate fringilla. Sed purus dui, tempus tempor velit vel, feugiat eleifend nulla.",
+        "From concept to completion, we focus on precision, durability, and aesthetic appeal. Our services include interior and exterior renovations, flooring, painting, plumbing, electrical work, and custom remodeling.Let us transform your vision into reality with professional renovations that enhance comfort, style, and value. Contact us today to discuss your project and get a free consultation!",
       img: "/aboutUs.png",
     },
   ];
