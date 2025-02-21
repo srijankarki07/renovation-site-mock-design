@@ -9,6 +9,7 @@ import GetStartedToday from "@/component/GetStartedToday";
 import Testimonials from "@/component/testimonials";
 import Info from "@/component/info";
 import Footer from "@/component/footer";
+import Projects from "@/component/projects";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutUs />
       <Services />
       <Stats />
+      <Projects />
       <Features />
       <Testimonials />
       <GetStartedToday />

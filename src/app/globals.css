@@ -98,6 +98,11 @@ p {
   color: #777;
 }
 
+.header.scrolled .menu p:hover,
+.header.scrolled .mobile-menu p:hover {
+  color: #ffcc00;
+}
+
 .menu p,
 .mobile-menu p {
   transition: color 0.3s ease;
