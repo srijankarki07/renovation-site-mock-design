@@ -1,13 +1,11 @@
-"use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 export default function Header() {
-  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const router = useRouter();
   const [typedText, setTypedText] = useState("");
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -16,6 +14,7 @@ export default function Header() {
     { id: 1, path: "/#home", name: "Home" },
     { id: 2, path: "/#aboutUs", name: "About Us" },
     { id: 3, path: "/#services", name: "Services" },
+    { id: 5, path: "/#projects", name: "Projects" },
     { id: 4, path: "/#features", name: "Our Features" },
     { id: 6, path: "/#contact", name: "Contact" },
   ];
